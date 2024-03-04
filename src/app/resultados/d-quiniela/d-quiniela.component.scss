@@ -1,0 +1,73 @@
+.formulario {
+  width: 55vw;
+  height: fit-content;
+  border-color: #008547;
+}
+
+.cierra {
+  background-color: gray;
+}
+
+.input {
+  width: 10vw;
+  margin-top: 30px;
+  margin-left: 40px;
+  mat-label {
+    color: #008547;
+  }
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+  button{
+    background-color: #008547;
+  }
+}
+
+#corto {
+  width: 7vw;
+}
+
+.superindice {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  font-size: 25px;
+  font-weight: 500;
+  color: #008547;
+}
+
+.row{
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+.partido{
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  align-items: center;
+}
+
+.resultado{
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  align-items: center;
+}
