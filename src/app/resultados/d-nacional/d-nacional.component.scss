@@ -62,3 +62,13 @@
   }
 }
 
+.fecha{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  button{
+    background-color: #007ac0;
+    margin-left: 10px;
+  }
+}

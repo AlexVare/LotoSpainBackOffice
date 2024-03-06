@@ -1,7 +1,7 @@
 .formulario {
   width: 55vw;
   height: fit-content;
-  border-color: #008547;
+  border-color: #cb1517;
 }
 
 .cierra {
@@ -13,7 +13,7 @@
   margin-top: 30px;
   margin-left: 40px;
   mat-label {
-    color: #008547;
+    color: #cb1517;
   }
 }
 
@@ -24,7 +24,7 @@
   justify-content: space-evenly;
   height: 10vh;
   button{
-    background-color: #008547;
+    background-color: #cb1517;
   }
 }
 
@@ -42,32 +42,46 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 10vh;
   font-size: 25px;
   font-weight: 500;
-  color: #008547;
+  color: #cb1517;
 }
 
 .row{
-  width: 90vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   margin-left: 30px;
+  font-size: larger;
+  font-weight: bolder;
+  p{
+    margin-top: 25px;
+  }
 }
 
 .partido{
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 50%;
   align-items: center;
 }
 
 .resultado{
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 50%;
   align-items: center;
+}
+
+.fecha{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  button{
+    background-color: #cb1517;
+    margin-left: 10px;
+  }
 }

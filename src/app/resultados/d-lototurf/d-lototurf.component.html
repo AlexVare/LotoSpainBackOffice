@@ -1,16 +1,19 @@
 <form [formGroup]="publicacionForm" class="formulario">
   <div class="titulo">LOTOTURF</div>
 
-  <mat-form-field class="input">
-    <mat-label>Fecha:</mat-label>
-    <input matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
+  <div class="fecha">
+    <mat-form-field class="input">
+      <mat-label>Fecha:</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fecha">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+      <button mat-raised-button color="primary" (click)='agregarFecha()'>Ayer</button>
+    </div>
 
   <mat-form-field class="input">
     <mat-label> Número de sorteo: </mat-label>
-    <input matInput type="text" formControlName="numero" [(ngModel)]="numero">
+    <input matInput type="text" formControlName="numero">
     <mat-error *ngIf="publicacionForm.get('numero')?.invalid && publicacionForm.get('numero')?.touched">
       El número de sorteo es necesario.
     </mat-error>

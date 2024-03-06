@@ -48,3 +48,14 @@
   font-weight: 500;
   color: #dc3f47;
 }
+
+.fecha{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  button{
+    background-color: #dc3f47;
+    margin-left: 10px;
+  }
+}

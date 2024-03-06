@@ -14,6 +14,9 @@ import { DEuromillonesComponent } from 'src/app/resultados/d-euromillones/d-euro
 import { DLototurfComponent } from 'src/app/resultados/d-lototurf/d-lototurf.component';
 import { DNacionalComponent } from 'src/app/resultados/d-nacional/d-nacional.component';
 import { DQuinielaComponent } from 'src/app/resultados/d-quiniela/d-quiniela.component';
+import { DQuinigolComponent } from 'src/app/resultados/d-quinigol/d-quinigol.component';
+import { DQuintupleComponent } from 'src/app/resultados/d-quintuple/d-quintuple.component';
+import { BBonolotoComponent } from 'src/app/botes/b-bonoloto/b-bonoloto.component';
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
@@ -52,7 +55,8 @@ export class ProductosComponent implements OnInit, AfterViewInit {
   }
 
   generarProducto() {
-    const dialogRef = this.dialog.open(DQuinielaComponent, {});
+    const dialogRef = this.dialog.open(DQuinielaComponent, {
+    });
     console.log('Producto nuevo');
 
     dialogRef.afterClosed().subscribe((result) => {

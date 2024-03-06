@@ -38,7 +38,7 @@ import { NboletoComponent } from './home/productos/nboleto/nboleto.component';
 import { DialogAutoresComponent } from './autores/dialog-autores/dialog-autores.component';
 import { DialogpostComponent } from './post/dialogpost/dialogpost.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MostrardialogComponent } from './post/mostrardialog/mostrardialog.component';
 import { EditardialogComponent } from './post/editardialog/editardialog.component';
 import { EditDialogAutoresComponent } from './autores/edit-dialog.autores/edit-dialog.autores.component';
@@ -56,6 +56,18 @@ import { DGordoComponent } from './resultados/d-gordo/d-gordo.component';
 import { DEurodreamsComponent } from './resultados/d-eurodreams/d-eurodreams.component';
 import { DNacionalComponent } from './resultados/d-nacional/d-nacional.component';
 import { DQuinielaComponent } from './resultados/d-quiniela/d-quiniela.component';
+import { DQuinigolComponent } from './resultados/d-quinigol/d-quinigol.component';
+import { DQuintupleComponent } from './resultados/d-quintuple/d-quintuple.component';
+import { BBonolotoComponent } from './botes/b-bonoloto/b-bonoloto.component';
+import { BEurodreamsComponent } from './botes/b-eurodreams/b-eurodreams.component';
+import { BEuromillonesComponent } from './botes/b-euromillones/b-euromillones.component';
+import { BGordoComponent } from './botes/b-gordo/b-gordo.component';
+import { BLototurfComponent } from './botes/b-lototurf/b-lototurf.component';
+import { BNacionalComponent } from './botes/b-nacional/b-nacional.component';
+import { BPrimitivaComponent } from './botes/b-primitiva/b-primitiva.component';
+import { BQuinielaComponent } from './botes/b-quiniela/b-quiniela.component';
+import { BQuinigolComponent } from './botes/b-quinigol/b-quinigol.component';
+import { BQuintupleComponent } from './botes/b-quintuple/b-quintuple.component';
 
 const appRoutes: Routes = [
   { path: 'i/home', component: HomeComponent },
@@ -88,6 +100,18 @@ const appRoutes: Routes = [
     DEurodreamsComponent,
     DNacionalComponent,
     DQuinielaComponent,
+    DQuinigolComponent,
+    DQuintupleComponent,
+    BBonolotoComponent,
+    BEurodreamsComponent,
+    BEuromillonesComponent,
+    BGordoComponent,
+    BLototurfComponent,
+    BNacionalComponent,
+    BPrimitivaComponent,
+    BQuinielaComponent,
+    BQuinigolComponent,
+    BQuintupleComponent,
   ],
   imports: [
     BrowserModule,
@@ -119,7 +143,7 @@ const appRoutes: Routes = [
 
     SweetAlert2Module.forRoot(),
   ],
-  providers: [LoginService,CookieService,AuthClassGuard,AuthService],
+  providers: [LoginService,CookieService,AuthClassGuard,AuthService,{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
 
   bootstrap: [AppComponent],
 })

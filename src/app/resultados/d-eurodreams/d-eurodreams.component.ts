@@ -18,6 +18,7 @@ export class DEurodreamsComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.publicacionForm = this.formBuilder.group({
+      fecha: [null, Validators.required],
       numero: [null, Validators.required],
       comb1: [null, Validators.required],
       comb2: [null, Validators.required],
@@ -37,5 +38,13 @@ export class DEurodreamsComponent {
 
   closeDialog() {
     throw new Error('Method not implemented.');
+  }
+  agregarFecha(){
+    var hoy =new Date();
+    console.log(hoy);
+    const diaSegundos= 24*60*60*1000;
+    var ayer= new Date(hoy.getTime()-diaSegundos);
+    console.log(ayer);
+    this.publicacionForm.patchValue({ fecha: ayer },{ onlySelf: true, emitEvent: false });
   }
 }

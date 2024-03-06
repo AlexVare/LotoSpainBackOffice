@@ -94,4 +94,12 @@ export class DQuinielaComponent {
     throw new Error('Method not implemented.');
   }
 
+  agregarFecha(){
+    var hoy =new Date();
+    console.log(hoy);
+    const diaSegundos= 24*60*60*1000;
+    var ayer= new Date(hoy.getTime()-diaSegundos);
+    console.log(ayer);
+    this.publicacionForm.patchValue({ fecha: ayer },{ onlySelf: true, emitEvent: false });
+  }
 }

@@ -1,0 +1,51 @@
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-d-quintuple',
+  templateUrl: './d-quintuple.component.html',
+  styleUrls: ['./d-quintuple.component.scss']
+})
+export class DQuintupleComponent {
+  publicacionForm!: FormGroup;
+
+  nombre!: string;
+  numero!: string;
+  combs: number[] = [];
+  numeros: number[] = [];
+  numerosC: number[] = [];
+  numerosR: number[] = [];
+
+
+  constructor(private formBuilder: FormBuilder) {
+    this.publicacionForm = this.formBuilder.group({
+
+      fecha: [null, Validators.required],
+      numero: [null, Validators.required],
+      comb1: [null, Validators.required],
+      comb2: [null, Validators.required],
+      comb3: [null, Validators.required],
+      comb4: [null, Validators.required],
+      comb5: [null, Validators.required],
+      comb6: [null, Validators.required],
+    });
+    this.numeros = Array.from({ length: 6 }, (_, i) => i + 1);
+  }
+
+  onSubmit(arg0: any, arg1: any, arg2: any) {
+    throw new Error('Method not implemented.');
+  }
+
+  closeDialog() {
+    throw new Error('Method not implemented.');
+  }
+
+  agregarFecha(){
+    var hoy =new Date();
+    console.log(hoy);
+    const diaSegundos= 24*60*60*1000;
+    var ayer= new Date(hoy.getTime()-diaSegundos);
+    console.log(ayer);
+    this.publicacionForm.patchValue({ fecha: ayer },{ onlySelf: true, emitEvent: false });
+  }
+}
