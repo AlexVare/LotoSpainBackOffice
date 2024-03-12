@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { InterfazBoleto } from 'src/app/models/BoletoInterface';
+import { InterfazBoleto } from 'src/app/models/boletoInterface';
 import { PostInterface } from 'src/app/post/post-interface';
 import { ProductService } from 'src/app/services/product-service.service';
 import Swal from 'sweetalert2';

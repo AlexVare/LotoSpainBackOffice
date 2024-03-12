@@ -1,0 +1,267 @@
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BQuinielaComponent } from 'src/app/botes/b-quiniela/b-quiniela.component';
+import { Bote } from 'src/app/models/bote.interface';
+import { QuinielaInterface } from 'src/app/models/quiniela.interface';
+import { DQuinielaComponent } from 'src/app/resultados/d-quiniela/d-quiniela.component';
+import { QdetallesComponent } from './qdetalles/qdetalles.component';
+
+@Component({
+  selector: 'app-quiniela',
+  templateUrl: './quiniela.component.html',
+  styleUrls: ['./quiniela.component.scss']
+})
+export class QuinielaComponent {
+  bonoloto: QuinielaInterface[] = [
+    {
+      fecha: new Date(),
+      jornada: 6,
+      partidos: [
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Lugo',
+          visitante: 'Deportivo de la Coruña',
+          resultado: '2-1',
+        },
+        {
+          local: 'Athletic de Bilbao',
+          visitante: 'Atlético de Madrid',
+          resultado: '4-1',
+        },
+        {
+          local: 'Pontevedra',
+          visitante: 'Rápido de Bouzas',
+          resultado: '2-2',
+        },
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Lugo',
+          visitante: 'Deportivo de la Coruña',
+          resultado: '2-1',
+        },
+        {
+          local: 'Athletic de Bilbao',
+          visitante: 'Atlético de Madrid',
+          resultado: '4-1',
+        },
+        {
+          local: 'Pontevedra',
+          visitante: 'Rápido de Bouzas',
+          resultado: '2-5',
+        },
+      ],
+    },
+    {
+      fecha: new Date(),
+      jornada: 6,
+      partidos: [
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Lugo',
+          visitante: 'Deportivo de la Coruña',
+          resultado: '2-1',
+        },
+        {
+          local: 'Athletic de Bilbao',
+          visitante: 'Atlético de Madrid',
+          resultado: '4-1',
+        },
+        {
+          local: 'Pontevedra',
+          visitante: 'Rápido de Bouzas',
+          resultado: '2-2',
+        },
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Real Madrid',
+          visitante: 'Barcelona',
+          resultado: '0-0',
+        },
+        {
+          local: 'Celta de Vigo',
+          visitante: 'Sevilla',
+          resultado: '3-0',
+        },
+        {
+          local: 'Rayo Vallecano',
+          visitante: 'Girona',
+          resultado: '1-3',
+        },
+        {
+          local: 'Lugo',
+          visitante: 'Deportivo de la Coruña',
+          resultado: '2-1',
+        },
+        {
+          local: 'Athletic de Bilbao',
+          visitante: 'Atlético de Madrid',
+          resultado: '4-1',
+        },
+        {
+          local: 'Pontevedra',
+          visitante: 'Rápido de Bouzas',
+          resultado: '2-5',
+        },
+      ],
+    },
+  ];
+  botes: Bote[] = [
+    {
+      fecha: new Date(),
+      sorteo: 3,
+      cuantia: 1300000,
+    },
+    {
+      fecha: new Date(),
+      sorteo: 3,
+      cuantia: 300000,
+    },
+    {
+      fecha: new Date(),
+      sorteo: 3,
+      cuantia: 2340000,
+    },
+    {
+      fecha: new Date(),
+      sorteo: 3,
+      cuantia: 33300000,
+    },
+  ];
+
+  constructor(public dialog: MatDialog, private http: HttpClient) {}
+
+  ngOnInit(): void {}
+
+  todoCero() {
+    const dialogRef = this.dialog.open(DQuinielaComponent, {});
+    console.log('Producto nuevo');
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
+  }
+
+  generarProducto() {
+    const dialogRef = this.dialog.open(BQuinielaComponent, {});
+    console.log('Producto nuevo');
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
+  }
+
+  millones(cuantia: number): string {
+    if (cuantia / 1000000 > 1) {
+      return cuantia / 1000000 + ' MILLONES DE EUROS';
+    } else {
+      return cuantia + '€';
+    }
+  }
+
+  // obtenerResultado(cadena: string): string {
+  //   var division: string[] = cadena.split('-');
+  //   if (parseInt(division[0]) > parseInt(division[1])) {
+  //     return '1';
+  //   } else if (parseInt(division[0]) == parseInt(division[1])) {
+  //     return 'X';
+  //   }else{
+  //     return "2";
+  //   }
+  // }
+
+  obtenerResultado(cadena: string): string {
+    var division: string[] = cadena.split('-');
+    if (parseInt(division[0]) >= 3) {
+      division[0]="M";
+    }
+    if (parseInt(division[1]) >= 3) {
+      division[1]="M";
+    }
+    return division[0]+"-"+division[1];
+  }
+
+  abrirDetalles(jornada:QuinielaInterface){
+    const dialogRef = this.dialog.open(QdetallesComponent, {
+      data:jornada
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
+  }
+}

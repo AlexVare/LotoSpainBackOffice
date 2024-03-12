@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { InterfazBoleto } from 'src/app/models/BoletoInterface';
+import { InterfazBoleto } from 'src/app/models/boletoInterface';
 import { ProductService } from 'src/app/services/product-service.service';
 import Swal from 'sweetalert2';
 

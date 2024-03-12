@@ -5,189 +5,81 @@
         SPAIN</span></mat-toolbar>
     <mat-nav-list>
       <div class="sidenav__item" id="inicio">
-        <div class="sidenav__item" id="row" (click)="true">
-          <mat-icon>home</mat-icon> <span class="menu"><a routerLink="home" class="enlaces">Inicio</a></span>
+        <div class="sidenav__item" id="row" (click)="navigateToInicio()">
+          <mat-icon>home</mat-icon> <span class="menu">Inicio</span>
         </div>
       </div>
 
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Resultados
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__bonoloto"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Bonoloto</a></span>
-              </div>
-            </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToBonoloto()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Bonoloto</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__eurom"></div>  
-                <span class="menu"><a routerLink="productos" class="enlaces">Euromillones</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToEuromillones()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Euromillones</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__eurod"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Eurodreams</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToEurodreams()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Eurodreams</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__gordo"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">El Gordo</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToGordo()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">El Gordo</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__primi"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">La Primitiva</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToPrimitiva()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">La Primitiva</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quini"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">La Quiniela</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToQuiniela()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">La Quiniela</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quinig"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Quinigol</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToQuinigol()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Quinigol</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quint"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Quíntuple</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToQuintuple()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Quíntuple</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__naci"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Lotería Nacional</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToNacional()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Lotería Nacional</span>
           </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__lotot"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Lototurf</a></span>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="sidenav__item" id="tienda" (click)="navigateToLototurf()">
+        <div class="sidenav__block" id="row">
+          <div class="sidenav__item__text">
+            <span class="menu">Lototurf</span>
           </div>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Botes
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__bonoloto"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Bonoloto</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__eurom"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Euromillones</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__eurod"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Eurodreams</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__gordo"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">El Gordo</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__primi"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">La Primitiva</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quini"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">La Quiniela</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quinig"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Quinigol</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__quint"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Quíntuple</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__naci"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Lotería Nacional</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="sidenav__item" id="tienda" (click)="navigateToTienda()">
-            <div class="sidenav__block" id="row">
-              <div class="sidenav__item__text">
-                <div class="image__lotot"></div>
-                <span class="menu"><a routerLink="productos" class="enlaces">Lototurf</a></span>
-              </div>
-            </div>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
+        </div>
+      </div>
     </mat-nav-list>
     <div class="container">
       <button type="button" (click)="logout()" class="logout">Cerrar Sesión</button>

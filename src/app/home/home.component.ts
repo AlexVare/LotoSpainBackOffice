@@ -55,7 +55,7 @@ export class HomeComponent {
     const dialogConfigs: DialogConfig[][] = [
       [{ component: DNacionalComponent }, { component: DBonolotoComponent }, { component: DPrimitivaComponent }], // Domingo
       [{ component: DLototurfComponent }, { component: DBonolotoComponent }, { component: DGordoComponent }], // Lunes
-      [{ component: DLototurfComponent }, { component: DBonolotoComponent }, { component: DGordoComponent }], // Martes
+      [{ component: DPrimitivaComponent }, { component: DBonolotoComponent }, { component: DEurodreamsComponent }], // Martes
       [{ component: DBonolotoComponent }, { component: DEuromillonesComponent }], // Miércoles
       [{ component: DBonolotoComponent }, { component: DLototurfComponent }], // Jueves
       [{ component: DNacionalComponent }, { component: DBonolotoComponent }, { component: DPrimitivaComponent }, { component: DEurodreamsComponent }, { component: DLototurfComponent }], // Viernes
@@ -79,7 +79,7 @@ export class HomeComponent {
     const dialogConfigs: DialogConfig[][] = [
       [{ component: BNacionalComponent }, { component: BBonolotoComponent }, { component: BPrimitivaComponent }], // Domingo
       [{ component: BLototurfComponent }, { component: BBonolotoComponent }, { component: BGordoComponent }], // Lunes
-      [{ component: BLototurfComponent }, { component: BBonolotoComponent }, { component: BGordoComponent }], // Martes
+      [{ component: BPrimitivaComponent }, { component: BBonolotoComponent }, { component: BEurodreamsComponent }], // Martes
       [{ component: BBonolotoComponent }, { component: BEuromillonesComponent }], // Miércoles
       [{ component: BBonolotoComponent }, { component: BLototurfComponent }], // Jueves
       [{ component: BNacionalComponent }, { component: BBonolotoComponent }, { component: BPrimitivaComponent }, { component: BEurodreamsComponent }, { component: BLototurfComponent }], // Viernes

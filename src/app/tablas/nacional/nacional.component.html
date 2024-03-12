@@ -1,0 +1,47 @@
+<div class="body">
+  <div class="header">
+    <div class="header__text"> Bonoloto</div>
+    <div class="btn_wrapper">
+      <button class="header__btn" (click)="todoCero()">Nuevo ganador</button>
+      <button class="header__btn" (click)="generarProducto()">Nuevo bote</button>
+    </div>
+  </div>
+  <div class="contenedor">
+    <div class="ganadores">
+      GANADORES
+      <div class="ganador" *ngFor="let item of bonoloto">
+        <div class="head">
+          <div class="logo"></div>
+          <p>LOTERÍA NACIONAL-{{item.tipo}}</p>
+          <p>{{item.fecha | date: 'shortDate' }}</p>
+          <mat-icon>add</mat-icon>
+        </div>
+        <div class="ganador__combinacion">
+          <p *ngIf="item.tipo=='extra'" class="extra">{{item.extra}}</p>
+          <div class="combi">
+            <div>1<sup>er</sup> premio<br>{{item.primero}}</div>
+            <div>2º premio<br>{{item.segundo}}</div>
+          </div>
+          <div class="extras">
+            <div class="columna"*ngFor="let rein of item.reintegros">
+              <div class="numero-combi comp">{{rein}}</div>
+              <p>R</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="botes">
+      BOTES
+      <div class="bote" *ngFor="let item of botes">
+        <div class="head">
+          <div class="logo"></div>
+          <p>BONOLOTO</p>
+          <p>{{item.fecha | date: 'shortDate'}}</p>
+          <mat-icon>add</mat-icon>
+        </div>
+        <div class="bote__cuantia">{{millones(item.cuantia)}}</div>
+      </div>
+    </div>
+  </div>
+</div>

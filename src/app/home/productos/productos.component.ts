@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { InterfazBoleto } from 'src/app/models/BoletoInterface';
+import { InterfazBoleto } from 'src/app/models/boletoInterface';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/home/productos/dialog-component/dialog.component';
 import { HttpClient } from '@angular/common/http';

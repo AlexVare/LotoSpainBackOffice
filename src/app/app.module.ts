@@ -68,6 +68,18 @@ import { BPrimitivaComponent } from './botes/b-primitiva/b-primitiva.component';
 import { BQuinielaComponent } from './botes/b-quiniela/b-quiniela.component';
 import { BQuinigolComponent } from './botes/b-quinigol/b-quinigol.component';
 import { BQuintupleComponent } from './botes/b-quintuple/b-quintuple.component';
+import { BonolotoComponent } from './tablas/bonoloto/bonoloto.component';
+import { EurodreamsComponent } from './tablas/eurodreams/eurodreams.component';
+import { EuromillonesComponent } from './tablas/euromillones/euromillones.component';
+import { GordoComponent } from './tablas/gordo/gordo.component';
+import { LototurfComponent } from './tablas/lototurf/lototurf.component';
+import { QuinigolComponent } from './tablas/quinigol/quinigol.component';
+import { QuinielaComponent } from './tablas/quiniela/quiniela.component';
+import { DetallesComponent } from './tablas/quinigol/detalles/detalles.component';
+import { CommonModule } from '@angular/common';
+import { QdetallesComponent } from './tablas/quiniela/qdetalles/qdetalles.component';
+import { PrimitivaComponent } from './tablas/primitiva/primitiva.component';
+import { NacionalComponent } from './tablas/nacional/nacional.component';
 
 const appRoutes: Routes = [
   { path: 'i/home', component: HomeComponent },
@@ -112,6 +124,17 @@ const appRoutes: Routes = [
     BQuinielaComponent,
     BQuinigolComponent,
     BQuintupleComponent,
+    BonolotoComponent,
+    EurodreamsComponent,
+    EuromillonesComponent,
+    GordoComponent,
+    LototurfComponent,
+    QuinigolComponent,
+    QuinielaComponent,
+    DetallesComponent,
+    QdetallesComponent,
+    PrimitivaComponent,
+    NacionalComponent,
   ],
   imports: [
     BrowserModule,
@@ -140,8 +163,8 @@ const appRoutes: Routes = [
     MatListModule,
     MatDatepickerModule,
     MatNativeDateModule,
-
     SweetAlert2Module.forRoot(),
+    CommonModule,
   ],
   providers: [LoginService,CookieService,AuthClassGuard,AuthService,{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
 

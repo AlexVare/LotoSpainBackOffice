@@ -20,7 +20,7 @@
   </mat-form-field>
 
     <mat-form-field class="input" *ngFor="let serie of [1, 2, 3, 4, 5, 6]">
-      <mat-label *ngIf="serie==1||serie==3"> {{ serie }}<span class="superindice">er</span> número: </mat-label>
+      <mat-label *ngIf="serie==1||serie==3"> {{ serie }}<sup>er</sup> número: </mat-label>
       <mat-label *ngIf="serie!=1&&serie!=3"> {{ serie }}º número: </mat-label>
       <mat-select formControlName="comb{{ serie }}">
         <mat-option *ngFor="let numero of numeros" [value]="numero">{{numero}}</mat-option>
