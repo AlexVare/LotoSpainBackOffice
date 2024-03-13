@@ -29,20 +29,9 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  navigateToTienda() {
-    this.router.navigate(['i/products']);
-  }
 
   navigateToInicio() {
     this.router.navigate(['i/home']);
-  }
-
-  navigateToAutores() {
-    this.router.navigate(['i/autores']);
-  }
-
-  navigateToPost() {
-    this.router.navigate(['i/post']);
   }
 
   isMenuOpen = false;

@@ -4,9 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PrincIpalPageComponent } from './princ-ipal-page/princ-ipal-page.component';
-import { PostComponent } from './post/post.component';
-import { AutoresComponent } from './autores/autores.component';
-import { ProductosComponent } from './home/productos/productos.component';
 import { AuthClassGuard } from './services/auth/auth.guard';
 import { BonolotoComponent } from './tablas/bonoloto/bonoloto.component';
 import { EurodreamsComponent } from './tablas/eurodreams/eurodreams.component';
@@ -45,21 +42,6 @@ const routes: Routes = [
 
         component: HomeComponent,
 
-      },
-      {
-        path: 'post',
-
-        component: PostComponent,
-
-      },
-      {
-        path: 'autores',
-        component: AutoresComponent,
-
-      },
-      {
-        path: 'products',
-        component: ProductosComponent,
       },
       {
         path: 'bonoloto',

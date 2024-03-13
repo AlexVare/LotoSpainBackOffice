@@ -20,11 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './services/auth/login.service';
-import { ProductosComponent } from './home/productos/productos.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PrincIpalPageComponent } from './princ-ipal-page/princ-ipal-page.component';
-import { PostComponent } from './post/post.component';
-import { AutoresComponent } from './autores/autores.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,16 +29,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './home/productos/dialog-component/dialog.component';
-import { EditDialogComponent } from './home/productos/edit-dialog/edit-dialog.component';
-import { NboletoComponent } from './home/productos/nboleto/nboleto.component';
-import { DialogAutoresComponent } from './autores/dialog-autores/dialog-autores.component';
-import { DialogpostComponent } from './post/dialogpost/dialogpost.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
-import { MostrardialogComponent } from './post/mostrardialog/mostrardialog.component';
-import { EditardialogComponent } from './post/editardialog/editardialog.component';
-import { EditDialogAutoresComponent } from './autores/edit-dialog.autores/edit-dialog.autores.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthClassGuard } from './services/auth/auth.guard';
@@ -91,19 +80,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     NavigationComponent,
-    PostComponent,
     LoginComponent,
-    ProductosComponent,
-    DialogComponent,
     PrincIpalPageComponent,
-    DialogpostComponent,
-    MostrardialogComponent,
-    AutoresComponent,
-    EditDialogComponent,
-    NboletoComponent,
-    DialogAutoresComponent,
-    EditardialogComponent,
-    EditDialogAutoresComponent,
     EuroPipe,
     DBonolotoComponent,
     DPrimitivaComponent,
