@@ -1,11 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatTableDataSource } from '@angular/material/table';
-import { InterfazBoleto } from 'src/app/models/boletoInterface';
 import { Bote } from 'src/app/models/bote.interface';
 import { BonolotoInterface } from 'src/app/models/bonoloto.interface';
-import { ProductService } from 'src/app/services/product-service.service';
 import { DBonolotoComponent } from 'src/app/resultados/d-bonoloto/d-bonoloto.component';
 import { BBonolotoComponent } from 'src/app/botes/b-bonoloto/b-bonoloto.component';
 
