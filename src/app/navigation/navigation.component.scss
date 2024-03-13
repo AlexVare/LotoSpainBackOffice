@@ -52,9 +52,8 @@
   &__block {
     width: 18vw;
     height: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 20% 70%;
     align-items: center;
     text-align: center;
   }
@@ -135,4 +134,45 @@ a.enlaces:hover {
   height: 60px;
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  height: 90%;
+  z-index: 1;
+  width: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.bonoloto{
+  background-image: url("../../assets/iconos/logoBonolotoNegro.svg");
+}
+.eurodreams{
+  width: 50%;
+  background-image: url("../../assets/iconos/logoEurodreamsNegro.svg");
+}
+.euromillones{
+  background-image: url("../../assets/iconos/logoEuromillonesNegro.svg");
+}
+.gordo{
+  background-image: url("../../assets/iconos/logoElGordoNegro.svg");
+}
+.nacional{
+  background-image: url("../../assets/iconos/logoNacionalNegro.svg");
+}
+.primitiva{
+  background-image: url("../../assets/iconos/logoPrimitivaNegro.svg");
+}
+.lototurf{
+  background-image: url("../../assets/iconos/logoLototurfNegro.svg");
+}
+.quintuple{
+  background-image: url("../../assets/iconos/logoQuintupleNegro.svg");
+}
+.quiniela{
+  background-image: url("../../assets/iconos/logoQuinielaNegro.svg");
+}
+.quinigol{
+  background-image: url("../../assets/iconos/logoQuinigolNegro.svg");
 }

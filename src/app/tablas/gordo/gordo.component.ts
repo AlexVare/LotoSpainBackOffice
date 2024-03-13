@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { BGordoComponent } from 'src/app/botes/b-gordo/b-gordo.component';
 import { Bote } from 'src/app/models/bote.interface';
 import { GordoInterface } from 'src/app/models/gordo.interface';
 import { DGordoComponent } from 'src/app/resultados/d-gordo/d-gordo.component';
@@ -71,13 +72,17 @@ export class GordoComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
-    console.log('Todo a cero');
+  generarGanador() {
+    const dialogRef = this.dialog.open(DGordoComponent, {});
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
   }
 
-  generarProducto() {
-    const dialogRef = this.dialog.open(DGordoComponent, {});
-    console.log('Producto nuevo');
+  generarBote() {
+    const dialogRef = this.dialog.open(BGordoComponent, {});
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);

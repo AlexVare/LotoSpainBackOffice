@@ -1,6 +1,6 @@
 <div class="body">
   <div class="header">
-    <div class="header__text"> Lotería Nacional</div>
+    <div class="header__text"> Quíntuple Plus</div>
     <div class="btn_wrapper">
       <button class="header__btn" (click)="generarGanador()">Nuevo ganador</button>
       <button class="header__btn" (click)="generarBote()">Nuevo bote</button>
@@ -8,24 +8,23 @@
   </div>
   <div class="contenedor">
     <div class="ganadores">
-      GANADORES
+      JORNADAS
       <div class="ganador" *ngFor="let item of bonoloto">
         <div class="head">
           <div class="logo"></div>
-          <p>LOTERÍA NACIONAL<span *ngIf="item.tipo!='extraordinario'">-{{item.tipo}}</span></p>
-          <p>{{item.fecha | date: 'shortDate' }}</p>
+          <p>QUÍNTUPLE PLUS</p>
+          <p>Jornada {{item.jornada}}ª - {{item.fecha | date: 'shortDate' }}</p>
           <mat-icon>add</mat-icon>
         </div>
         <div class="ganador__combinacion">
-          <p *ngIf="item.tipo=='extraordinario'" class="extra">{{item.extra}}</p>
           <div class="combi">
-            <div>1<sup>er</sup> premio<br>{{item.primero}}</div>
-            <div>2º premio<br>{{item.segundo}}</div>
-          </div>
-          <div class="extras">
-            <div class="columna"*ngFor="let rein of item.reintegros">
-              <div class="numero-combi comp">{{rein}}</div>
-              <p>R</p>
+            <div class="row" *ngFor="let ganador of item.ganadores; let i=index">
+              <p *ngIf="(i+1)!=6" class="row__title">{{i+1}}.Carrera {{i+1}}</p>
+              <p *ngIf="(i+1)==6" class="row__title">{{i+1}}.Carrera 5 (2º Clasificado)</p>
+              <div class="row__number">
+                <img src="../../../assets/resultados/caballofondo.svg" class="caballo">
+                <p class="resultado">{{ganador}}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -36,8 +35,8 @@
       <div class="bote" *ngFor="let item of botes">
         <div class="head">
           <div class="logo"></div>
-          <p>LOTERÍA NACIONAL</p>
-          <p>{{item.fecha | date: 'shortDate'}}</p>
+          <p>QUÍNTUPLE PLUS</p>
+          <p>Jornada {{item.sorteo}}ª - {{item.fecha | date: 'shortDate' }}</p>
           <mat-icon>add</mat-icon>
         </div>
         <div class="bote__cuantia">{{millones(item.cuantia)}}</div>

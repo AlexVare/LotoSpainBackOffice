@@ -204,19 +204,17 @@ export class QuinielaComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
+  generarGanador() {
     const dialogRef = this.dialog.open(DQuinielaComponent, {});
-    console.log('Producto nuevo');
-
+    
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);
       window.location.reload();
     });
   }
 
-  generarProducto() {
+  generarBote() {
     const dialogRef = this.dialog.open(BQuinielaComponent, {});
-    console.log('Producto nuevo');
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);

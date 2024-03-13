@@ -98,8 +98,6 @@ export class PrimitivaComponent {
     });
   }
 
-  editBoleto() {}
-
   millones(cuantia: number): string {
     if (cuantia / 1000000 > 1) {
       return cuantia / 1000000 + ' MILLONES DE EUROS';

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { BEuromillonesComponent } from 'src/app/botes/b-euromillones/b-euromillones.component';
 import { Bote } from 'src/app/models/bote.interface';
 import { EuromillonesInterface } from 'src/app/models/euromillones.interface';
 import { DEuromillonesComponent } from 'src/app/resultados/d-euromillones/d-euromillones.component';
@@ -60,13 +61,8 @@ export class EuromillonesComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
-    console.log('Todo a cero');
-  }
-
-  generarProducto() {
+  generarGanador() {
     const dialogRef = this.dialog.open(DEuromillonesComponent, {});
-    console.log('Producto nuevo');
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);
@@ -74,11 +70,14 @@ export class EuromillonesComponent {
     });
   }
 
-  cargaMasiva() {
-    console.log('Carga masiva');
-  }
+  generarBote() {
+    const dialogRef = this.dialog.open(BEuromillonesComponent, {});
 
-  editBoleto() {}
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
+  }
 
   millones(cuantia: number): string {
     if (cuantia / 1000000 > 1) {

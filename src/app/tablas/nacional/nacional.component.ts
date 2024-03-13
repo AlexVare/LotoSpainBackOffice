@@ -32,7 +32,7 @@ export class NacionalComponent {
     },
     {
       fecha: new Date(),
-      tipo: "extra",
+      tipo: "extraordinario",
       extra: "Sorteo del día del padre",
       primero: "98765",
       segundo: "12345",
@@ -79,7 +79,7 @@ export class NacionalComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
+  generarGanador() {
     const dialogRef = this.dialog.open(DNacionalComponent, {});
     console.log('Producto nuevo');
 
@@ -89,7 +89,7 @@ export class NacionalComponent {
     });
   }
 
-  generarProducto() {
+  generarBote() {
     const dialogRef = this.dialog.open(BNacionalComponent, {});
     console.log('Producto nuevo');
 

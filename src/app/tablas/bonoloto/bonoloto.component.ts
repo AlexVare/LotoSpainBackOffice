@@ -84,7 +84,7 @@ export class BonolotoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  todoCero() {
+  generarGanador() {
     const dialogRef = this.dialog.open(DBonolotoComponent, {});
     console.log('Producto nuevo');
 
@@ -94,7 +94,7 @@ export class BonolotoComponent implements OnInit {
     });
   }
 
-  generarProducto() {
+  generarBote() {
     const dialogRef = this.dialog.open(BBonolotoComponent, {});
     console.log('Producto nuevo');
 

@@ -80,6 +80,7 @@ import { CommonModule } from '@angular/common';
 import { QdetallesComponent } from './tablas/quiniela/qdetalles/qdetalles.component';
 import { PrimitivaComponent } from './tablas/primitiva/primitiva.component';
 import { NacionalComponent } from './tablas/nacional/nacional.component';
+import { QuintupleComponent } from './tablas/quintuple/quintuple.component';
 
 const appRoutes: Routes = [
   { path: 'i/home', component: HomeComponent },
@@ -135,6 +136,7 @@ const appRoutes: Routes = [
     QdetallesComponent,
     PrimitivaComponent,
     NacionalComponent,
+    QuintupleComponent,
   ],
   imports: [
     BrowserModule,

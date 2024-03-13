@@ -5,6 +5,7 @@ import { Bote } from 'src/app/models/bote.interface';
 import { BonolotoInterface } from 'src/app/models/bonoloto.interface';
 import { DEurodreamsComponent } from 'src/app/resultados/d-eurodreams/d-eurodreams.component';
 import { EurodreamsInterface } from 'src/app/models/eurodreams.interface';
+import { BEurodreamsComponent } from 'src/app/botes/b-eurodreams/b-eurodreams.component';
 
 @Component({
   selector: 'app-eurodreams',
@@ -72,13 +73,17 @@ export class EurodreamsComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
-    console.log('Todo a cero');
+  generarGanador() {
+    const dialogRef = this.dialog.open(DEurodreamsComponent, {});
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Diálogo cerrado', result);
+      window.location.reload();
+    });
   }
 
-  generarProducto() {
-    const dialogRef = this.dialog.open(DEurodreamsComponent, {});
-    console.log('Producto nuevo');
+  generarBote() {
+    const dialogRef = this.dialog.open(BEurodreamsComponent, {});
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);

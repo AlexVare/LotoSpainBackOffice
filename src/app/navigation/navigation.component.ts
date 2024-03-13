@@ -94,6 +94,7 @@ export class NavigationComponent {
   }
 
   navigateToQuintuple() {
+    this.router.navigate(['i/quintuple']);
   }
 
   navigateToNacional() {

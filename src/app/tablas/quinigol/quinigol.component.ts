@@ -115,9 +115,8 @@ export class QuinigolComponent {
 
   ngOnInit(): void {}
 
-  todoCero() {
+  generarGanador() {
     const dialogRef = this.dialog.open(DQuinigolComponent, {});
-    console.log('Producto nuevo');
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);
@@ -125,9 +124,8 @@ export class QuinigolComponent {
     });
   }
 
-  generarProducto() {
+  generarBote() {
     const dialogRef = this.dialog.open(BQuinigolComponent, {});
-    console.log('Producto nuevo');
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);

@@ -17,6 +17,7 @@ import { QuinigolComponent } from './tablas/quinigol/quinigol.component';
 import { QuinielaComponent } from './tablas/quiniela/quiniela.component';
 import { PrimitivaComponent } from './tablas/primitiva/primitiva.component';
 import { NacionalComponent } from './tablas/nacional/nacional.component';
+import { QuintupleComponent } from './tablas/quintuple/quintuple.component';
 const routes: Routes = [
   {
     path: '',
@@ -95,6 +96,10 @@ const routes: Routes = [
       {
         path: 'nacional',
         component: NacionalComponent,
+      },
+      {
+        path: 'quintuple',
+        component: QuintupleComponent,
       },
     ],
   },
