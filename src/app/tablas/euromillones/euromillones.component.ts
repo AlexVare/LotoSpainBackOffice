@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BEuromillonesComponent } from 'src/app/botes/b-euromillones/b-euromillones.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { EuromillonesInterface } from 'src/app/models/euromillones.interface';
 import { DEuromillonesComponent } from 'src/app/resultados/d-euromillones/d-euromillones.component';
 
@@ -42,7 +42,7 @@ export class EuromillonesComponent {
       estrellas: [5,3]
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       cuantia: 300000,

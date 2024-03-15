@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BGordoComponent } from 'src/app/botes/b-gordo/b-gordo.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { GordoInterface } from 'src/app/models/gordo.interface';
 import { DGordoComponent } from 'src/app/resultados/d-gordo/d-gordo.component';
 
@@ -53,7 +53,7 @@ export class GordoComponent {
       clave: 5,
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       cuantia: 300000,

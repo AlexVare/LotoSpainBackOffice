@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BLototurfComponent } from 'src/app/botes/b-lototurf/b-lototurf.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { LototurfInterface } from 'src/app/models/lototurf.interface';
 import { DLototurfComponent } from 'src/app/resultados/d-lototurf/d-lototurf.component';
 
@@ -59,7 +59,7 @@ export class LototurfComponent {
       reint: 7,
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       sorteo: 3,

@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BNacionalComponent } from 'src/app/botes/b-nacional/b-nacional.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
+import { BoteNacionalInterface } from 'src/app/models/boteNacional.interface';
 import { NacionalInterface } from 'src/app/models/nacional.inerface';
 import { DNacionalComponent } from 'src/app/resultados/d-nacional/d-nacional.component';
 
@@ -60,19 +61,37 @@ export class NacionalComponent {
       reintegros: [1, 2, 3],
     },
   ];
-  botes: Bote[] = [
+  botes: BoteNacionalInterface[] = [
     {
-      fecha: new Date(),
-      cuantia: 300000,
+      bote:{
+        fecha: new Date,
+        cuantia: 30000
+      },
+      tipo: "jueves",
     },
     {
-      fecha: new Date(),
-      cuantia: 1300000,
+      bote:{
+        fecha: new Date,
+        cuantia: 200000
+      },
+      tipo: "sabado",
     },
     {
-      fecha: new Date(),
-      cuantia: 2300000,
+      bote:{
+        fecha: new Date,
+        cuantia: 1300000
+      },
+      tipo: "jueves",
     },
+    {
+      bote:{
+        fecha: new Date,
+        cuantia: 0
+      },
+      tipo: "extraordinario",
+      nombreExtra: "Sorteo del día del padre"
+    },
+
   ];
 
   constructor(public dialog: MatDialog, private http: HttpClient) {}

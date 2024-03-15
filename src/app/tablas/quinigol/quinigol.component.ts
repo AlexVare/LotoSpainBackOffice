@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BQuinigolComponent } from 'src/app/botes/b-quinigol/b-quinigol.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { QuinigolInterface } from 'src/app/models/quinigol.interface';
 import { DQuinigolComponent } from 'src/app/resultados/d-quinigol/d-quinigol.component';
 import { DetallesComponent } from './detalles/detalles.component';
@@ -88,7 +88,7 @@ export class QuinigolComponent {
       ],
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       sorteo: 3,

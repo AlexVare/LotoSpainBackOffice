@@ -1,6 +1,5 @@
-export interface Bote{
+export interface BoteInterface{
   fecha: Date,
-  sorteo?: number,
-  tipo?:string,
   cuantia: number
+  sorteo?: number,
 }

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BQuinielaComponent } from 'src/app/botes/b-quiniela/b-quiniela.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { QuinielaInterface } from 'src/app/models/quiniela.interface';
 import { DQuinielaComponent } from 'src/app/resultados/d-quiniela/d-quiniela.component';
 import { QdetallesComponent } from './qdetalles/qdetalles.component';
@@ -177,7 +177,7 @@ export class QuinielaComponent {
       ],
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       sorteo: 3,
@@ -206,7 +206,7 @@ export class QuinielaComponent {
 
   generarGanador() {
     const dialogRef = this.dialog.open(DQuinielaComponent, {});
-    
+
     dialogRef.afterClosed().subscribe((result) => {
       console.log('Diálogo cerrado', result);
       window.location.reload();

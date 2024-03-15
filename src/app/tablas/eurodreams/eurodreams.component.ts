@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { DEurodreamsComponent } from 'src/app/resultados/d-eurodreams/d-eurodreams.component';
 import { EurodreamsInterface } from 'src/app/models/eurodreams.interface';
 import { BEurodreamsComponent } from 'src/app/botes/b-eurodreams/b-eurodreams.component';
@@ -53,7 +53,7 @@ export class EurodreamsComponent {
       suenho: 5,
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       cuantia: 300000,

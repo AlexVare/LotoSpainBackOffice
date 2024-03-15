@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BQuintupleComponent } from 'src/app/botes/b-quintuple/b-quintuple.component';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { QuintupleInterface } from 'src/app/models/quintuple.interface';
 import { DQuintupleComponent } from 'src/app/resultados/d-quintuple/d-quintuple.component';
 
@@ -37,7 +37,7 @@ export class QuintupleComponent {
       ganadores: ['01','02','10','05','03','01'],
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       sorteo: 3,

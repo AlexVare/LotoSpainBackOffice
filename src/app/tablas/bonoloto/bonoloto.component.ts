@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Bote } from 'src/app/models/bote.interface';
+import { BoteInterface } from 'src/app/models/bote.interface';
 import { BonolotoInterface } from 'src/app/models/bonoloto.interface';
 import { DBonolotoComponent } from 'src/app/resultados/d-bonoloto/d-bonoloto.component';
 import { BBonolotoComponent } from 'src/app/botes/b-bonoloto/b-bonoloto.component';
@@ -62,7 +62,7 @@ export class BonolotoComponent implements OnInit {
       reint: 7,
     },
   ];
-  botes: Bote[] = [
+  botes: BoteInterface[] = [
     {
       fecha: new Date(),
       cuantia: 300000,
