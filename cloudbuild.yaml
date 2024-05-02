@@ -21,8 +21,6 @@ steps:
       - '--platform'
       - $_PLATFORM
     entrypoint: gcloud
-options:
-  logging: REGIONAL_USER_OWNED_BUCKET
 timeout: 1200s
 images:
   - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
