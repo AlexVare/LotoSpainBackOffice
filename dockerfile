@@ -13,4 +13,4 @@ RUN npm run build --prod
 RUN ls -lisa
 FROM nginx:alpine
 COPY --from=build /source/dist/app-viveiro /usr/share/nginx/html
-EXPOSE 8080
+EXPOSE 4200
