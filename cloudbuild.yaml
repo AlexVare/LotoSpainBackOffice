@@ -21,12 +21,6 @@ steps:
       - '--platform'
       - $_PLATFORM
     entrypoint: gcloud
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        echo "Image name: $_AR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA"
 options:
   logging: CLOUD_LOGGING_ONLY
 timeout: 1200s
