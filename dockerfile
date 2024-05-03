@@ -13,5 +13,5 @@ RUN npm run build --prod
 RUN ls -lisa
 FROM nginx:alpine
 COPY --from=build /source/dist/app-viveiro /usr/share/nginx/html
-RUN sed -i 's/listen 80;/listen ${PORT};/' /etc/nginx/conf.d/default.conf
+RUN sed -i 's/listen 80;/listen 8080;/' /etc/nginx/conf.d/default.conf
 RUN cat /etc/nginx/conf.d/default.conf
