@@ -1,6 +1,6 @@
 FROM node:16.14.0 as build
 
-WORKDIR /source
+WORKDIR ./
 
 # Copy the package lock file into the container
 COPY package*.json ./
@@ -12,6 +12,6 @@ COPY . .
 RUN npm run build --prod
 
 FROM nginx:alpine
-COPY -from=build /source/dist/app-viveiro /usr/share/nginx/html
+COPY -from=build /dist/app-viveiro /usr/share/nginx/html
 COPY -from=build /nginx.conf /etc/nginx/conf.d/
 EXPOSE 8080
