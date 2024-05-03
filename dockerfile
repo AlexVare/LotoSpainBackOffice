@@ -1,6 +1,6 @@
 FROM node:16.14.0 as build
 
-WORKDIR ./
+WORKDIR /source
 
 # Copy the package lock file into the container
 COPY package*.json ./
