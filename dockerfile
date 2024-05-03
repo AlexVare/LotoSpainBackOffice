@@ -12,6 +12,6 @@ COPY . .
 RUN npm run build --prod
 
 FROM nginx:alpine
-COPY -from=build /dist/lotospainbackoffice /usr/share/nginx/html
+COPY -from=build /source/dist/app-viveiro /usr/share/nginx/html
 COPY -from=build /nginx.conf /etc/nginx/conf.d/
 EXPOSE 8080
