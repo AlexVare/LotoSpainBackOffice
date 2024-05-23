@@ -80,6 +80,11 @@ import { EditNacionalComponent } from './tablas/nacional/edit-nacional/edit-naci
 import { EditPrimitivaComponent } from './tablas/primitiva/edit-primitiva/edit-primitiva.component';
 import { EditQuinigolComponent } from './tablas/quinigol/edit-quinigol/edit-quinigol.component';
 import { EditQuintupleComponent } from './tablas/quintuple/edit-quintuple/edit-quintuple.component';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+
+registerLocaleData(localeEs, 'es');
 
 const appRoutes: Routes = [
   { path: 'i/home', component: HomeComponent },
@@ -166,7 +171,14 @@ const appRoutes: Routes = [
     SweetAlert2Module.forRoot(),
     CommonModule,
   ],
-  providers: [LoginService,CookieService,AuthClassGuard,AuthService,{ provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
+  providers: [
+    LoginService,
+    CookieService,
+    AuthClassGuard,
+    AuthService,
+    { provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+    { provide: LOCALE_ID, useValue: 'es' },
+  ],
 
   bootstrap: [AppComponent],
 })
